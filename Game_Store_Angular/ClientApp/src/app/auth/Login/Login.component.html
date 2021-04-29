@@ -1,0 +1,7 @@
+<form class="form-login" (ngSubmit)="submitLogin()">
+  <h1 class="h1">Login</h1>
+  <input class="inp-email" [(ngModel)]="model.Email" placeholder="Email" name="Email">
+  <input class="inp-password" [(ngModel)]="model.Password" placeholder="Password" name="Password">
+  <button class="btSubmit">Submit</button>
+  <p class="p-Register">Not registered yet? <a [routerLink]="['/register']">Register</a></p>
+</form>

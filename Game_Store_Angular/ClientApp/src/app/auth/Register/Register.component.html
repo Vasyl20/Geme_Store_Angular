@@ -1,0 +1,12 @@
+<form class="form-login" #myForm="ngForm" (ngSubmit)="subitRegister()">
+  <h1 class="h1">Login</h1>
+  <input type="text" [(ngModel)]="model.Email" class="input-st" placeholder="Email" name="email">
+  <input type="password" [(ngModel)]="model.Password"  class="input-st" placeholder="Password" name="password">
+  <input type="password" [(ngModel)]="confirmPassword" class="input-st" placeholder="Password" name="confirm">
+  <input type="text" [(ngModel)]="model.FullName" class="input-st" placeholder="Full name" name="fullname">
+  <input type="text" [(ngModel)]="model.Phone" class="input-st" placeholder="Phone number" name="number">
+  <input type="text" [(ngModel)]="model.Address" class="input-st" placeholder="Address" name="address">
+  <input type="number" [(ngModel)]="model.Age" class="input-st inp-numder" placeholder="Age" name="age">
+  <button class="btSubmit">Submit</button>
+  <p class="p-Register">Alredy register? <a [routerLink]="['/login']">login</a></p>
+</form>

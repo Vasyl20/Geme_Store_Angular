@@ -1,0 +1,73 @@
+.form-login{
+    width: 35%;
+    height: 430px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 50px;
+    background-color: black;
+}
+
+.h1{
+    color: white;
+    text-align: center;
+    padding: 40px;
+    /* text-shadow: 1px 1px 0 #838183;  */
+}
+
+.inp-email{
+    width: 70%;
+    height: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    display:block;
+    padding: 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.inp-password{
+    width: 70%;
+    height: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 25px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    display:block;
+    padding: 0px;
+    border: 0px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+
+}
+
+input :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.btSubmit{
+    width: 40%;
+    height: 40px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 40px;
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+}
+
+.p-Register{
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(179, 179, 179);
+}
