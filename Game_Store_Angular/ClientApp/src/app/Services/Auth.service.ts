@@ -11,10 +11,11 @@ import jwt_decode from "jwt-decode";
   providedIn: 'root'
 })
 export class AuthService {
-[x: string]: any;
+
 
 constructor(private http: HttpClient) { }
 
+currect_token: any;
 token_data: any;
 baseUrl = "/api/Account";
 loginStatus = new EventEmitter<boolean>();
@@ -28,11 +29,11 @@ login(model: LoginModel): Observable<ApiResponse> {
 }
 
 isAdmin(): boolean {
-  var currect_token = localStorage.getItem('token');
+  this.currect_token = localStorage.getItem('token');
 
-   if(currect_token != null) {
-     currect_token = jwt_decode(currect_token);
-     if(this.token_data.roles == "Admin") {
+   if(this.currect_token != null) {
+     this.currect_token = jwt_decode(this.currect_token);
+     if(this.currect_token.roles == "Admin") {
        return true;
      } else {
        return false;
@@ -42,9 +43,9 @@ isAdmin(): boolean {
    }
   }
     isLoggedIn(): boolean {
-      var currect_token = localStorage.getItem('token');
+      this.currect_token = localStorage.getItem('token');
 
-     if(currect_token != null) {
+     if(this.currect_token != null) {
        return true;
      } else {
        return false;

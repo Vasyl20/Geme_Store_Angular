@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Game_Store_Angular.DDTO.DataAccess
 {
-    public class EFContext : IdentityDbContext<User>
+    public class EFContext : IdentityDbContext<User> 
     {
         public EFContext(DbContextOptions<EFContext> options) : base(options) { }
+        public DbSet<Games> games { get; set; }
     }
 }

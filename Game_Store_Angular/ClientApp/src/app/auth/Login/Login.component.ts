@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
           console.log(data)
           if(data.code == 200){
             this.notifier.notify("success", "You success register in system!");
-            localStorage.setItem("togen", data.token);
+            localStorage.setItem("token", data.token);
             
             this.authService.loginStatus.emit(true);
 

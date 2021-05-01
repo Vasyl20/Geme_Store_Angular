@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Game_Store_Angular.Migrations
 {
-    public partial class first : Migration
+    public partial class Games : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,6 +47,27 @@ namespace Game_Store_Angular.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tbGames",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Game_name = table.Column<string>(nullable: false),
+                    BriefDescription = table.Column<string>(nullable: false),
+                    Вescription = table.Column<string>(nullable: false),
+                    Price = table.Column<int>(nullable: false),
+                    Game_Icon = table.Column<string>(nullable: false),
+                    Picture1 = table.Column<string>(nullable: false),
+                    Picture2 = table.Column<string>(nullable: false),
+                    Picture3 = table.Column<string>(nullable: false),
+                    Picture4 = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tbGames", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -211,6 +232,9 @@ namespace Game_Store_Angular.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "tbGames");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

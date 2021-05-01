@@ -12,10 +12,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 const routes: Routes = [
 
     { path: '', component: HomeComponent, pathMatch: 'full' },
-    { path: 'login', pathMatch: 'full',canActivate: [NotLogetInGuard], component: LoginComponent },
-    { path: 'register', pathMatch: 'full',canActivate: [NotLogetInGuard], component: RegisterComponent },
-    { path: 'admin-panel', pathMatch: 'full', canActivate: [AdminGuard], component: AdminPanelComponent },
-    { path: 'user-profile', pathMatch: 'full', canActivate:[UserGuard], component: UserProfileComponent },
+    { path: 'login',canActivate: [NotLogetInGuard], component: LoginComponent },
+    { path: 'register', canActivate: [NotLogetInGuard], component: RegisterComponent },
+    { path: 'admin-panel',  canActivate: [AdminGuard], component: AdminPanelComponent },
+    { path: 'user-profile',  canActivate:[UserGuard], component: UserProfileComponent },
 
 ];
 
