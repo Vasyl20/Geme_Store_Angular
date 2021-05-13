@@ -21,6 +21,10 @@ namespace Game_Store_Angular.DDTO.DataAccess.Entity
         [Required]
         public int Price { get; set; }
         [Required]
+        public DateTime Release_date { get; set; }
+        [Required]
+        public string Genre { get; set; }
+        [Required]
         public string Game_Icon { get; set; }
         [Required]
         public string Picture1 { get; set; }

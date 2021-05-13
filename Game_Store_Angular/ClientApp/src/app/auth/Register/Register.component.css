@@ -1,97 +1,168 @@
-.form-login{
-    width: 35%;
-    height: 750px;
-    margin-left: 35%;
-    margin-right: 35%;
-    margin-top: 50px;
-    background-color: black;
+ .bood {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: linear-gradient(to right, #271f30, #7400f9);
+    background-repeat: no-repeat
 }
 
-.h1{
-    color: white;
-    text-align: center;
-    padding: 40px;
-    /* text-shadow: 1px 1px 0 #838183;  */
+#backVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-/* .inp-email{
-    width: 70%;
-    height: 40px;
-    margin-left: 15%;
-    margin-right: 15%;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    text-align: center;
+input,
+textarea {
+    background-color: #F3E5F5;
+    border-radius: 50px !important;
+    padding: 12px 15px 12px 15px !important;
+    width: 100%;
     box-sizing: border-box;
-    display:block;
-    padding: 0px;
-    border: 0px;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border: none !important;
+    border: 1px solid #F3E5F5 !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    font-weight: 400
 }
 
-.inp-password{
-    width: 70%;
-    height: 40px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 25px;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-    display:block;
-    padding: 0px;
-    border: 0px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-
-} */
-
-input :active, :hover, :focus {
-    outline: 0;
-    outline-offset: 0;
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #271f30 !important;
+    outline-width: 0;
+    font-weight: 400
 }
 
-.btSubmit{
-    width: 40%;
-    height: 40px;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 40px;
-    background-color: black;
-    border-radius: 20px;
-    border: 1px solid white;
-    text-align: center;
-    color: white;
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
 }
 
-.p-Register{
-    padding-top: 20px;
-    text-align: center;
-    color: rgb(179, 179, 179);
+.card {
+    border-radius: 0;
+    border: none
 }
 
-.input-st {
-    width: 70%;
-    height: 40px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 25px;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    box-sizing: border-box;
-    display:block;
-    padding: 0px;
-    border: 0px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-
+.card1 {
+    width: 50%;
+    padding: 0px 30px 10px 30px
 }
 
-.inp-numder::-webkit-outer-spin-button,
-.inp-numder::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
+.card2 {
+    width: 50%;
+    background-image: linear-gradient(to right, #271f30, #7400f9)
+}
+
+
+::placeholder {
+    color: rgb(63, 61, 61) !important;
+    opacity: 1
+}
+
+:-ms-input-placeholder {
+    color:  rgb(63, 61, 61) !important
+}
+
+::-ms-input-placeholder {
+    color: rgb(63, 61, 61) !important
+}
+
+.form-control-label {
+    font-size: 12px;
+    margin-left: 15px
+}
+
+.msg-info {
+    padding-left: 15px;
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #7400f9, #271f30);
+    padding: 15px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #7400f9, #7400f9)
+}
+
+.btn-white {
+    border-radius: 50px;
+    color: #7400f9;
+    background-color: #fff;
+    padding: 8px 40px;
+    cursor: pointer;
+    border: 1px solid #7400f9 !important
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #271f30, #7400f9)
+}
+
+a {
+    color: #000
+}
+
+a:hover {
+    color: #000
+}
+
+.i-fo {
+    margin-top: 20px;
+}
+.bf{
+    font-size: 25px;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 50px !important
+}
+
+.sm-text {
+    font-size: 15px
+}
+
+@media screen and (max-width: 992px) {
+    .card1 {
+        width: 100%;
+        padding: 40px 30px 10px 30px
+    }
+
+    .card2 {
+        width: 100%
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card2 {
+        padding: 50px
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important
+    }
 }

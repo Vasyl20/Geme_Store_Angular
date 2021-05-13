@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Game_Store_Angular.Migrations
 {
-    public partial class Games : Migration
+    public partial class gameStor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -59,6 +59,8 @@ namespace Game_Store_Angular.Migrations
                     BriefDescription = table.Column<string>(nullable: false),
                     Вescription = table.Column<string>(nullable: false),
                     Price = table.Column<int>(nullable: false),
+                    Release_date = table.Column<DateTime>(nullable: false),
+                    Genre = table.Column<string>(nullable: false),
                     Game_Icon = table.Column<string>(nullable: false),
                     Picture1 = table.Column<string>(nullable: false),
                     Picture2 = table.Column<string>(nullable: false),

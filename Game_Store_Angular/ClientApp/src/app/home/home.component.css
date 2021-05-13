@@ -1,32 +1,10 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
+@charset "UTF-8";
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-.cols{
-  float: left;
-  margin-right: 300px;
-}
-
-
-body {
+.bood {
     color: #000;
     overflow-x: hidden;
     height: 100%;
+    width: auto;
     background-color: rgb(24, 24, 24);
     background-repeat: no-repeat;
 }
@@ -40,15 +18,14 @@ body {
     opacity: 50%;
 }
 .card-deck{
-    margin: 50px 300px;
-   
+    margin: 50px 150px;
+    /* background-color: rgb(39, 37, 37); */
+
 }
 
 .card{
     background-color: #16161694 !important;
     color: rgb(196, 196, 196);
-    width: 50px;
-    width: 50px;
 }
 
 .carouselst{
@@ -57,13 +34,9 @@ body {
   margin: 30px auto;
 
 }
-
-.img-logo2 {
-  float: right;
-  margin-left: 300px;
-}
 footer {
     height: 80px;
+    width: 100%;
     margin-top: 80px;
     background: #0e0e0e;
     text-align:center;
@@ -72,9 +45,9 @@ footer {
   * {box-sizing: border-box;}
 form {
   position: relative;
-  width: 700px;
+  width: 300px;
   float: right;
-
+  margin-right: 350px;
   margin-top: 460px;
   margin-bottom: 10px;
 }

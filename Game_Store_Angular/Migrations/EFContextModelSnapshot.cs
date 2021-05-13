@@ -38,6 +38,10 @@ namespace Game_Store_Angular.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Picture1")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -56,6 +60,9 @@ namespace Game_Store_Angular.Migrations
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Release_date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Вescription")
                         .IsRequired()

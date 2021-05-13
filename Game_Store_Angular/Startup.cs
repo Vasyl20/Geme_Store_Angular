@@ -130,7 +130,7 @@ namespace Game_Store_Angular
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-            SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
+            //SeederDatabase.SeedData(app.ApplicationServices, env, Configuration);
         }
     }
 }

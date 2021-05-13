@@ -11,11 +11,22 @@ import { AuthService } from 'src/app/Services/Auth.service';
 })
 export class RegisterComponent implements OnInit {
 
+  isExpanded = false;
+  isLoggedIn: boolean;
+  isAdmin: boolean;
   constructor(
     private notifier: NotifierService,
     private router: Router,
-    private authService: AuthService
-  ) { }
+    private authService: AuthService,
+  ) {
+    this.isLoggedIn = this.authService.isLoggedIn();
+    this.isAdmin = this.authService.isAdmin();
+ 
+    this.authService.loginStatus.subscribe((status) => {
+      this.isLoggedIn = status;
+      this.isAdmin = this.authService.isAdmin();
+    })
+   }
 
   confirmPassword: string;
   model = new RegisterModel();
@@ -46,6 +57,20 @@ export class RegisterComponent implements OnInit {
       })
     }
   }
+
+
+  Logout() {
+    this.authService.Logout();
+  }
+
+  collapse() {
+    this.isExpanded = false;
+  }
+
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+  }
+
   ngOnInit() {
   }
 

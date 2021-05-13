@@ -1,3 +1,188 @@
-<p>
-  admin-panel works!
-</p>
+<div class="bood">
+    <!-- <video autoplay muted loop id="backVideo">
+        <source src="../../assets/background — копия/backgroundLogin.mp4" type="video/mp4">
+    </video> -->
+
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <!-- кніпочки на боковій панелі -->
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul>
+            <li><img src="../../assets/background — копия/logo2.png" style="width: 250px;"></li>
+            <!-- <li><a href="#1">Hom</a>
+            <li><a href="#2">Create game</a>
+            <li><a href="#3">Admin panel</a>
+            <li><a href="#4">2</a>
+            <li><a href="#5">3</a>
+            <li><a href="#6">4</a> -->
+                <li  class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+                    <a href="#1" class="nav-link text-dark" [routerLink]="['/']">Home</a>
+                  </li>
+                  <li *ngIf="isAdmin === true  && isLoggedIn == true" class="nav-item" [routerLinkActive]="['link-active']">
+                    <a href="#2" class="nav-link text-dark" [routerLink]="['/game-create']">Create game</a>
+                  </li>
+        
+                  <li *ngIf="isAdmin === true  && isLoggedIn == true" class="nav-item" [routerLinkActive]="['link-active']">
+                    <a href="#3" class="nav-link text-dark" [routerLink]="['/admin-panel']">Admin panel</a>
+                  </li>
+                  <li *ngIf="isLoggedIn === true" class="nav-item">
+                    <a href="#4" class="nav-link text-dark" (click)="Logout()">Logout</a>
+                  </li>
+
+        </ul>
+    </nav>
+
+    <!-- пошук -->
+    <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="material-icons" style="color: rgb(132, 0, 255);">search</i></button>
+    </form>
+
+    <!-- галерея (вставила рандомні фотки 800х450 щоб бачить як воно працює) -->
+    <div id="demo" class="carousel slide carouselst" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../assets/background — копия/1.jpg" alt="Los Angeles">
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/background — копия/2.jpg" alt="Chicago">
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/background — копия/3.jpg" alt="New York">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+
+    </div>
+
+    <!-- карточки і рандомний текст і картинки в них  -->
+    <div class="card-deck">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card-deck">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Название карточки</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This card has even longer content than the first to show that equal height action.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- футер шоб все було гарно -->
+    <footer>
+        <img src="../../assets/background — копия/logo2.png" class="footimg">
+    </footer>
+</div>

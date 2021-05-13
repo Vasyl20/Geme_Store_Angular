@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Store_Angular.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20210429172948_Games")]
-    partial class Games
+    [Migration("20210504172358_gameStor")]
+    partial class gameStor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,10 @@ namespace Game_Store_Angular.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Genre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Picture1")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -58,6 +62,9 @@ namespace Game_Store_Angular.Migrations
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Release_date")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Вescription")
                         .IsRequired()

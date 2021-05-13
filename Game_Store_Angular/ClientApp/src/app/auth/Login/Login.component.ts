@@ -14,6 +14,10 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class LoginComponent implements OnInit {
 
+  isExpanded = false;
+  isLoggedIn: boolean;
+  isAdmin: boolean;
+
     constructor(
       private notifier: NotifierService,
       private router: Router,
@@ -63,6 +67,19 @@ export class LoginComponent implements OnInit {
     
     }
 
+
+    Logout() {
+      this.authService.Logout();
+    }
+  
+    collapse() {
+      this.isExpanded = false;
+    }
+  
+    toggle() {
+      this.isExpanded = !this.isExpanded;
+    }
+  
   ngOnInit() {
   }
 

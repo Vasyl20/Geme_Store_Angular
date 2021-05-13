@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TokenInterceptor } from './Services/interseptor';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ServiceGame } from './Services/ServiceGame';
+import { CreateGameComponent } from './admin-panel/Create-Game/Create-Game.component';
 
 @NgModule({
   declarations: [		
@@ -29,7 +31,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     LoginComponent,
     RegisterComponent,
       AdminPanelComponent,
-      UserProfileComponent
+      UserProfileComponent,
+      CreateGameComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -54,7 +57,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    NgxSpinnerService ],
+    NgxSpinnerService, ServiceGame ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

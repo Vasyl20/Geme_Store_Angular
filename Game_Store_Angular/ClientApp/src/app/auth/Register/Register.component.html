@@ -1,12 +1,66 @@
-<form class="form-login" #myForm="ngForm" (ngSubmit)="subitRegister()">
-  <h1 class="h1">Login</h1>
-  <input type="text" [(ngModel)]="model.Email" class="input-st" placeholder="Email" name="email">
-  <input type="password" [(ngModel)]="model.Password"  class="input-st" placeholder="Password" name="password">
-  <input type="password" [(ngModel)]="confirmPassword" class="input-st" placeholder="Password" name="confirm">
-  <input type="text" [(ngModel)]="model.FullName" class="input-st" placeholder="Full name" name="fullname">
-  <input type="text" [(ngModel)]="model.Phone" class="input-st" placeholder="Phone number" name="number">
-  <input type="text" [(ngModel)]="model.Address" class="input-st" placeholder="Address" name="address">
-  <input type="number" [(ngModel)]="model.Age" class="input-st inp-numder" placeholder="Age" name="age">
-  <button class="btSubmit">Submit</button>
-  <p class="p-Register">Alredy register? <a [routerLink]="['/login']">login</a></p>
+<form class="bood" #myForm="ngForm" (ngSubmit)="subitRegister()">
+  <video autoplay muted loop id="backVideo">
+    <source src="../../../assets/background — копия/backgroundLogin.mp4" type="video/mp4">
+ </video>
+
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+              <div class="i-fo">
+                    <a href="#1" class="nav-link text-dark" [routerLink]="['/']"><i class="fas fa-arrow-circle-left bf"></i></a>
+              </div>
+                <div class="row justify-content-center my-auto">
+                    <div class="col-md-8 col-10 my-5">
+                        <div class="row justify-content-center px-3 mb-3">
+                            <img id="logo" src="../../../assets/background — копия/logo1.png">
+                        </div>
+                        <h6 class="msg-info">Please login to your account</h6>
+                        <div class="form-group"> <label class="form-control-label text-muted">Username</label>
+                            <input type="text" [(ngModel)]="model.Email" id="email" name="email" placeholder="Enter your email"
+                                class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Password</label>
+                            <input type="password" [(ngModel)]="model.Password" id="psw" name="psw" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Repeat
+                                password</label>
+                            <input type="password" [(ngModel)]="confirmPassword" id="psw" name="psw" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Full name</label>
+                            <input type="text" [(ngModel)]="model.FullName" id="fullname" name="fullname" placeholder="Full name"
+                                class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Phone number</label>
+                            <input type="text" [(ngModel)]="model.Phone" id="phnum" name="phnum" placeholder="Phone number"
+                                class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Adress</label>
+                            <input type="text"  [(ngModel)]="model.Address" id="adress" name="adress" placeholder="Adress" class="form-control">
+                        </div>
+                        <div class="form-group"> <label class="form-control-label text-muted">Enter your age</label>
+                            <input type="number" [(ngModel)]="model.Age" id="age" name="age" placeholder="Age" class="form-control">
+                        </div>
+                        <div class="row justify-content-center my-3 px-3"> <button
+                                class="btn-block btn-color">Register
+                                to Game Area</button> </div>
+                        <div class="bottom text-center mb-5">
+                         <p href="#" class="sm-text mx-auto mb-3">Already
+                          register? 
+                                 <a class="btn btn-white ml-2" [routerLink]="['/register']">Login </a></p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+
+                <div class="my-auto mx-md-5 px-md-5 right">
+                    <h3 class="text-white">We are more than just a site</h3>
+                    <small class="text-white">Game Area is the ultimate destination for playing, discussing, and
+                        creating games. Read reviews, explore custom recommendations, and more...</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </form>
