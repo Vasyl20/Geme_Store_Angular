@@ -2,7 +2,7 @@
 @charset "UTF-8";
 
 .bood {
-    color: #000;
+    color: #000 !important;
     overflow-x: hidden;
     height: 100%;
     width: 100%;
@@ -11,12 +11,14 @@
 }
 
 #backVideo {
-    position: fixed;
+ position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity: 50%;
+    
+    
+    
 }
 
 .nav {
@@ -228,7 +230,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    color: #dadada;
+    color: #dadada !important;
     width: 100%;
     text-decoration: none;
     -webkit-transition: color .5s ease, padding .5s ease;
@@ -334,7 +336,7 @@ button:before {
 
 
 .card-deck{
-    margin: 50px 150px;
+    margin: 50px 80px;
    
 }
 

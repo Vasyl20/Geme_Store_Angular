@@ -15,10 +15,9 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity: 50%;
 }
 .card-deck{
-    margin: 50px 150px;
+    margin: 50px 80px;
     /* background-color: rgb(39, 37, 37); */
 
 }

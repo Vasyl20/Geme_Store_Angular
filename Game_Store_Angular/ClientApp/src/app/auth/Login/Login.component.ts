@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['/admin-panel'])
             }
             else if(this.token_data.roles == "User") {
-                this.router.navigate(['/user-profile'])
+                this.router.navigate(['/'])
             }
             this.spinner.hide();
                
