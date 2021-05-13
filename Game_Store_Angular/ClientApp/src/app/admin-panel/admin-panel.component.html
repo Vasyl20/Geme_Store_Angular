@@ -15,7 +15,7 @@
             <li><a href="#4">2</a>
             <li><a href="#5">3</a>
             <li><a href="#6">4</a> -->
-                <li  class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+                <li  class="nav-item " [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
                     <a href="#1" class="nav-link text-dark" [routerLink]="['/']">Home</a>
                   </li>
                   <li *ngIf="isAdmin === true  && isLoggedIn == true" class="nav-item" [routerLinkActive]="['link-active']">
@@ -33,13 +33,13 @@
     </nav>
 
     <!-- пошук -->
-    <form>
+    <!-- <form>
         <input type="text" placeholder="Search...">
         <button type="submit"><i class="material-icons" style="color: rgb(132, 0, 255);">search</i></button>
-    </form>
+    </form> -->
 
     <!-- галерея (вставила рандомні фотки 800х450 щоб бачить як воно працює) -->
-    <div id="demo" class="carousel slide carouselst" data-ride="carousel">
+    <!-- <div id="demo" class="carousel slide carouselst" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
             <li data-target="#demo" data-slide-to="1"></li>
@@ -65,7 +65,7 @@
         </a>
 
 
-    </div>
+    </div> -->
 
     <!-- карточки і рандомний текст і картинки в них  -->
     <div class="card-deck">

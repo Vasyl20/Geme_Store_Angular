@@ -35,7 +35,7 @@
 
           
           <li *ngIf="isLoggedIn === true" class="nav-item">
-            <a class="nav-link text-dark" (click)="Logout()">Logout</a>
+            <a class="nav-link text-dark" [routerLink]="['/']" (click)="Logout()">Logout</a>
           </li>
 
 

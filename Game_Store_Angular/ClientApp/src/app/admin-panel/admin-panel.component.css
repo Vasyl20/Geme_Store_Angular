@@ -55,7 +55,9 @@
     content: '\2630';
     text-decoration: none;
 }
-
+.col-1{
+    color: white;
+}
 
 .nav-toggle:hover {
     color: #f4f4f4;
@@ -332,7 +334,7 @@ button:before {
 
 
 .card-deck{
-    margin: 50px 300px;
+    margin: 50px 150px;
    
 }
 
